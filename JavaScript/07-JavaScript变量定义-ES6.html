@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07-JavaScript变量定义-ES6.html</title>
+    <!--
+    为了解决老板标准的两个注意点
+    - JavaScript中如果定义了同名的变量，那么后定义的变量会覆盖先定义的变量
+    - 在老版本的标准的（ES6之前）JavaScript中可以先使用变量，再定义变量，并不会报错
+
+    ES6退出了一个新的定义变量的方式
+    格式：
+    ES6之前：var 变量名称;
+    ES6开始：let 变量名称;
+    -->
+    <script>
+        //定义一个变量
+/*
+        let num;
+        num = 666;
+        console.log(num);//666
+        //修改变量
+        num = 888;
+        console.log(num);//888
+        */
+/*
+        let num = 123;
+        let num = 888;
+        console.log(num);//会明确报错 不会显示888 如果var定义的变量则不会报错且显示var
+        */
+
+        /*
+        console.log(num); //undefind 不会报错 因为老版本预编译问题
+        var num = 123;
+        */
+        console.log(num); //报错
+        let num = 123;
+    </script>
+</head>
+<body>
+
+</body>
+</html>
