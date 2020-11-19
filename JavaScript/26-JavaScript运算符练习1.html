@@ -7,8 +7,81 @@
         /*
         let value = true;
         let res = +value;
-        console.log(res);//true
-
+        console.log(res);//1
+        //=+ 和+= 不同 具体见https://blog.csdn.net/qq_34802416/article/details/82960850
+        */
+        /*
+        let str = "123px";
+        let num = -str;
+        console.log(num);//NaN
+        // =- 相当于 强转为数字类型,底层调用Number()函数,于是报错NaN
+        */
+        /*
+        let res = 1 +NaN
+        console.log(res);//NaN
+        //Nan进行运算结果都是NaN
+        */
+        /*
+        let res = 3 % -10;
+        console.log(res); //3
+        //负数参与的取模运算规则：先忽略负号，按照正数运算之后，被取模的数是正数结果就取正，反之取负。
+        */
+        /*
+        let res = 2 * 2 * undefined;
+        console.log(res); //NaN
+        */
+        /*
+        let res = 2 * 2 * null;
+        console.log(res); //0
+        //null 执行Number()函数 转换为0
+        */
+        /*
+        let res = 5;
+        res += 2 * 2;
+        console.log(res); //9
+        // res += 4; res = 4 + 5 = 9
+        */
+        /*
+        let res = 5;
+        res *= 2 + 2;
+        console.log(res);// 20
+        //res = res * (2+2) = 5 * 4 = 20
+        */
+        /*
+        let a = 5,b,c;
+        b = a = c;
+        console.log(a,b,c); //undefined undefined undefined
+        */
+        /*
+        let res = 6 == 6 === 6
+        console.log(res); // false
+        //let res = 6 == true;   let res = 6 == 1; let res = false;
+        */
+        /*
+        let res = 1 == 6 >= 3;
+        console.log(res);  //true
+        //let res = 1 == true;  let res = 1 == 1 ; let res = true;
+        */
+        /*
+        let res1 = null && 666;
+        console.log(res1); // null
+        let res2 = null || 666;
+        console.log(res2); // 666
+        // && 运算 如果条件A不成立, 则返回条件A的数值本身
+        // || 运算 如果条件A不成立, 则不管条件B成不成立都返回条件B数值本身
+        */
+        /*
+        两者的区别是什么?
+        let res = 1 + 1, 2 + 2,3 + 3; //报错  因为逗号运算符优先级最低,导致res = 2,2+2,3+3 之后的算式不是一个完整的都好运算符
+        let res = (1 + 1,2 + 2,3 + 3); //通过  res = (2,4,6); res = 6;
+        console.log(res);
+        */
+        /*
+        let a = 5;
+        let res1 = ++a + ++a; // res = 6 + 7;
+        console.log(res1); // 13
+        let res2 = a++ + a++;// res2 = 5 + 6;
+        console.log(res); //  res2 = 11;
         */
     </script>
 </head>
