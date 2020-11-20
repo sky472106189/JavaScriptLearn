@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>79-JavaScript-箭头函数</title>
+    <script>
+        /*
+        箭头函数是ES6新增的一种定义函数的格式
+        目的:简化定义函数的代码
+        */
+
+        /*
+        2.ES6之前
+        function 函数名称(形参列表){
+            封装的代码;
+        }
+        let 函数名称 = function(形参列表){
+            需要封装的代码;
+        }
+
+        3.ES6之后
+        let 函数名称 = (形参列表)=>{
+            需要封装的代码;
+        }
+
+        4.注意点
+        */
+        let say = (name) =>{
+            console.log("hello" + name);
+        }
+        //let say = (name) =>console.log("hello" + name);
+        say("刺猬鱼");
+    </script>
+</head>
+<body>
+
+</body>
+</html>

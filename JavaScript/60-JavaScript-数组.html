@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>60-JavaScript-数组</title>
+    <script>
+        let arr = new Array(3);
+        arr[0]="ci";
+        arr[1]="wei";
+        arr[2]="yu";
+        /*Js中数组的存储空间不够会自动扩容*/
+        arr[3]="++";
+        /*JS数组可以存储不同类型数据*/
+        arr[4]=123;
+        /*JS数组分配的空间不一定是连续的,Js数组采用"哈希映射"方式分配存储空间*/
+
+        /*如果存储的都是相同类型数据,那么会尽量分配连续的存储空间*/
+        /*如果存储的都是不同类型数据,那么就不会分配连续的存储空间*/
+
+        /*JS创建数组的其他方式
+        let 变量 = new Array(size);指定大小数组
+        let 变量 = new Array();创建空数组
+        let 变量 = new Array(data1,data2,...);创建一个带数据的数组
+
+        let 变量 = [] 创建一个空数组;
+        let 变量 = [data1,data2,...] 创建一个
+        */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

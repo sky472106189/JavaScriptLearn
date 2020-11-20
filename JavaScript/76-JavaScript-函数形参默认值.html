@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>76-JavaScript-函数形参默认值</title>
+    <script>
+        /*function getSum(a,b) {
+            // ES6之前可以通过逻辑运算符来给形参指定默认值
+            a = a || "刺猬学习";
+            b = b || "天天向上";
+            console.log(a,b);
+        }
+        getSum();*/
+        /*ES6开始可以直接在形参后面=指定默认值*/
+        function getSum(a="刺猬学习",b="冲冲冲锋") {
+            console.log(a,b)
+        }
+        getSum();
+    </script>
+</head>
+<body>
+
+</body>
+</html>

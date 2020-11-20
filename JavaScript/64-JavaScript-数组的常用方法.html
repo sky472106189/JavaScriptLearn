@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>64-JavaScript-数组的常用方法</title>
+    <script>
+        let arr = [1,2,3,4,5];
+        //1.如何清空数组
+        arr = [];
+        arr.length = 0;
+        arr.splice(0,arr.length);
+
+        //2.如何将数组转换为字符串
+        arr.toString();
+
+        //3.如何将数组转换为指定格式的字符串
+            //默认转换为String
+            arr.join();
+        arr.join("+"); // 1+2+3+4+5
+
+        //4.如何拼接数组
+        let arr1 = [1,3,5];
+        let arr2 = [2,4,6];
+        let res = arr1 +arr2;//错误 1,3,52,46 按照String
+        arr1.concat(arr2); //正确方法 [1,3,5,2,4,6] 注意:原来的数组arr1和arr2并未发生改变
+
+        //ES6新增方法
+            //...是扩展运算符  在解构赋值中(等号的左边)表示将剩余的数据打包成一个新的数组
+            //               在等号的右边,那么表示将数组中所有的数组解开,放到所在位置
+        let res = [...arr1,...arr2];
+
+        //5.如何对数组中内容进行翻转
+        arr.reverse();
+
+        //6.截取数组中指定范围内容
+        //[1,2,3,4,5]  slice包头不包尾
+        arr.slice(1,3);//[2,3];
+
+        //7.查找元素再数组中的位置
+        //[1,2,3,4,5]
+        //indexOf方法如果找到了，就会返回元素下标
+        //indexOf方法如果没找到，就会返回-1
+        arr = [1,2,3,4,5,3]
+        arr.indexOf(3); //2
+
+        //参数1:需要查找的元素
+        //参数2:从什么位置开始查找
+        arr.indexOf(3,4)//6
+
+        //从后往前找
+        arr.lastIndexOf(3);//6
+        arr.lastIndexOf(3,4)//2
+
+        //8.判断是否包含某个元素
+        arr.includes(4);//true;
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
